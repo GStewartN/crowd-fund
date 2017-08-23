@@ -19,7 +19,7 @@ export class CharityService {
   }
 
   getCharityById(charityId: string) {
-    return this.database.object('charities/' + chartyId);
+    return this.database.object('charities/' + charityId);
   }
 
 }
