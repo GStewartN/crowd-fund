@@ -5,14 +5,16 @@
       "description": "This board game is an RPG full of family fun. Make strategic decisions about how to live your life.",
       "managers": "Rick James, Mitch McConnell",
       "targetAmount": 100000,
-      "rewards": "One Game Box, Exclusive T-Shirt"
+      "rewards": "One Game Box, Exclusive T-Shirt",
+      "id": 1
     },
     "1": {
       "title": "Dry Ice Popsicles",
       "description": "Ever wanted your popsicle to be so cold it looks like it is from the future? You are in luck. We will make one for you.",
       "managers": "Ice Cream Jimmy",
       "targetAmount": 50000,
-      "rewards": "One month supply of dry ice popsicles. 50 popsicles max."
+      "rewards": "One month supply of dry ice popsicles. 50 popsicles max.",
+      "id": 2
     }
   }
 }
