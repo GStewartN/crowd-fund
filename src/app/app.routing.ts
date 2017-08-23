@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { SplashPageComponent } from './splash-page/splash-page.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { IdeasComponent } from './ideas/ideas.component';
+import { CharitiesComponent } from './charities/charities.component';
 
 const appRoutes: Routes = [
   {
@@ -16,6 +17,10 @@ const appRoutes: Routes = [
   {
     path: 'ideas',
     component: IdeasComponent
+  },
+  {
+    path: 'charities',
+    component: CharitiesComponent
   }
 ];
 
