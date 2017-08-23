@@ -4,6 +4,7 @@ import { SplashPageComponent } from './splash-page/splash-page.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { IdeasComponent } from './ideas/ideas.component';
 import { CharitiesComponent } from './charities/charities.component';
+import { AdminComponent } from './admin/admin.component';
 
 const appRoutes: Routes = [
   {
@@ -21,6 +22,10 @@ const appRoutes: Routes = [
   {
     path: 'charities',
     component: CharitiesComponent
+  },
+  {
+    path: 'admin',
+    component: AdminComponent
   }
 ];
 

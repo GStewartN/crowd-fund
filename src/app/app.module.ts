@@ -12,6 +12,7 @@ import { SplashPageComponent } from './splash-page/splash-page.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { IdeasComponent } from './ideas/ideas.component';
 import { CharitiesComponent } from './charities/charities.component';
+import { AdminComponent } from './admin/admin.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -26,7 +27,8 @@ export const firebaseConfig = {
     SplashPageComponent,
     ProjectsComponent,
     IdeasComponent,
-    CharitiesComponent
+    CharitiesComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
