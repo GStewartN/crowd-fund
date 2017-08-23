@@ -14,5 +14,23 @@
       "targetAmount": 50000,
       "rewards": "One month supply of dry ice popsicles. 50 popsicles max."
     }
+  },
+  "ideas": {
+    "0": {
+      "title": "Collapsable Dog Carrier",
+      "description": "A dog carrier that can fold down to pocket size when not in use.",
+      "managers": "Snoop Doggy Dogg",
+      "mvp": "A foldable carrier of any size.",
+      "targetAmount": 50000,
+      "rewards": "2 free prototypes"
+    },
+    "1": {
+      "title": "Collapsable Cat Carrier",
+      "description": "A cat carrier that can fold down to pocket size when not in use.",
+      "managers": "Hello Kitty",
+      "mvp": "A foldable carrier of any size.",
+      "targetAmount": 50000,
+      "rewards": "2 free prototypes"
+    }
   }
 }

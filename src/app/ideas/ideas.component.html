@@ -1,3 +1,63 @@
-<p>
-  ideas works!
-</p>
+<div *ngIf="addingNewIdea===false">
+  <button (click)="showAddNewForm()">Add New Idea</button>
+</div>
+
+<div *ngIf="addingNewIdea===true">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title"><h3>Add New Idea</h3></div>
+    </div>
+    <div class="panel-body">
+      <div>
+        <div>
+          <label>Idea Title</label>
+          <br>
+          <input #newTitle>
+        </div>
+        <div>
+          <label>Description</label>
+          <br>
+          <input #newDescription>
+        </div>
+        <div>
+          <label>Manager(s)</label>
+          <br>
+          <input #newManagers>
+        </div>
+        <div>
+          <label>MVP</label>
+          <br>
+          <input #newMvp>
+        </div>
+        <div>
+          <label>Target Funding</label>
+          <br>
+          <input #newTargetAmount>
+        </div>
+        <div>
+          <label>Rewards</label>
+          <br>
+          <input #newRewards>
+        </div>
+        <button (click)="submitForm(newTitle.value, newDescription.value, newManagers.value, newMvp.value, newTargetAmount.value, newRewards.value);
+        newTitle.value='';
+        newDescription.value='';
+        newManagers.value='';
+        newMvp.value='';
+        newTargetAmount.value='';
+        newRewards.value=''">Add</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div *ngFor="let idea of ideas | async" (click)="goToDetailPage(idea)" class="panel panel-default">
+  <div class="panel-heading">
+    <h2>{{idea.title}}</h2>
+  </div>
+  <div class="panel-body">
+    <p>{{idea.description}}</p>
+  </div>
+</div>

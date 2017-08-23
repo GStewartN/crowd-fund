@@ -6,6 +6,7 @@ import { IdeasComponent } from './ideas/ideas.component';
 import { CharitiesComponent } from './charities/charities.component';
 import { AdminComponent } from './admin/admin.component';
 import { ProjectDetailComponent } from './project-detail/project-detail.component';
+import { IdeaDetailComponent } from './idea-detail/idea-detail.component';
 
 const appRoutes: Routes = [
   {
@@ -23,6 +24,10 @@ const appRoutes: Routes = [
   {
     path: 'ideas',
     component: IdeasComponent
+  },
+  {
+    path: 'ideas/:id',
+    component: IdeaDetailComponent
   },
   {
     path: 'charities',
