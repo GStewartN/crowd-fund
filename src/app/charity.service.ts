@@ -14,7 +14,7 @@ export class CharityService {
     return this.charities;
   }
 
-  addNewCharities(newCharity: Charity) {
+  addNewCharity(newCharity: Charity) {
     this.charities.push(newCharity);
   }
 

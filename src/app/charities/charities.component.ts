@@ -25,4 +25,14 @@ export class CharitiesComponent implements OnInit {
     this.router.navigate(['charities', clickedCharity.$key])
   }
 
+  showAddNewForm() {
+    this.addingNewCharity = true;
+  }
+
+  submitForm(title: string, description: string, managers: string, targetAmount: number, ethics: string, mission: string) {
+    var newCharity = new Charity(title, description, managers, targetAmount, ethics, mission);
+    this.charityService.addNewCharity(newCharity);
+    this.addingNewCharity = false;
+  }
+
 }
