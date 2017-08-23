@@ -49,3 +49,12 @@
     </div>
   </div>
 </div>
+
+<div *ngFor="let charity of charities | async" (click)="goToDetailPage(charity)" class="panel panel-default">
+  <div class="panel-heading">
+    <h2>{{charity.title}}</h2>
+  </div>
+  <div class="panel-body">
+    <p>{{charity.description}}</p>
+  </div>
+</div>

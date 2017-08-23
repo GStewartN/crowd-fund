@@ -32,5 +32,23 @@
       "targetAmount": 50000,
       "rewards": "2 free prototypes"
     }
+  },
+  "charities": {
+    "0": {
+      "title": "Unicef",
+      "description": "Donate to a worthy cause. Unicef is an international children's organization.",
+      "managers": "Barack Obama, Jimmy Carter",
+      "targetAmount": 500000,
+      "ethics": "98% of all incoming donations go directly to communities whose children are suffering. Only 2% of donations are reserved for operational costs.",
+      "mission": "Children across the globe have a right to live a healthy life. Do your part to make that a reality."
+    },
+    "1": {
+      "title": "Astronauts Without Borders",
+      "description": "Former space travelers educate kids about the new frontier and the value of exploration.",
+      "managers": "Neil Armstrong Estate",
+      "targetAmount": 75000,
+      "ethics": "Astronauts donate their time free of charge, and all donations are used to produce and distribute educational materials as well as coordinate educational events.",
+      "mission": "Inspire all children to pursue a life of exploration, curiosity, and adventure."
+    }
   }
 }
