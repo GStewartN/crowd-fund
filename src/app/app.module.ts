@@ -10,6 +10,7 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { routing } from './app.routing';
 import { SplashPageComponent } from './splash-page/splash-page.component';
 import { ProjectsComponent } from './projects/projects.component';
+import { IdeasComponent } from './ideas/ideas.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -22,7 +23,8 @@ export const firebaseConfig = {
   declarations: [
     AppComponent,
     SplashPageComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    IdeasComponent
   ],
   imports: [
     BrowserModule,
