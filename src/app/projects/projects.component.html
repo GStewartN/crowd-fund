@@ -1,3 +1,52 @@
+<div *ngIf="addingNewProject===false">
+  <button (click)="showAddNewForm()">Add New Project</button>
+</div>
+
+<div *ngIf="addingNewProject===true">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title"><h3>Add New Project</h3></div>
+    </div>
+    <div class="panel-body">
+      <div>
+        <div>
+          <label>Project Title</label>
+          <br>
+          <input #newTitle>
+        </div>
+        <div>
+          <label>Description</label>
+          <br>
+          <input #newDescription>
+        </div>
+        <div>
+          <label>Manager(s)</label>
+          <br>
+          <input #newManagers>
+        </div>
+        <div>
+          <label>Target Funding</label>
+          <br>
+          <input #newTargetAmount>
+        </div>
+        <div>
+          <label>Rewards</label>
+          <br>
+          <input #newRewards>
+        </div>
+        <button (click)="submitForm(newTitle.value, newDescription.value, newManagers.value, newTargetAmount.value, newRewards.value);
+        newTitle.value='';
+        newDescription.value='';
+        newManagers.value='';
+        newTargetAmount.value='';
+        newRewards.value=''">Add</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
 <div *ngFor="let project of projects | async" (click)="goToDetailPage(project)" class="panel panel-default">
   <div class="panel-heading">
     <h2>{{project.title}}</h2>

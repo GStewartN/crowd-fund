@@ -11,11 +11,14 @@ import { ProjectService } from '../project.service';
   providers: [ProjectService]
 })
 export class ProjectDetailComponent implements OnInit {
-
   projectId: string;
   projectToDisplay;
 
-  constructor(private route: ActivatedRoute, private location: Location, private projectService: ProjectService) { }
+  constructor(
+    private route: ActivatedRoute,
+    private location: Location,
+    private projectService: ProjectService
+  ) {}
 
   ngOnInit() {
     this.route.params.forEach((urlParameters) => {
@@ -23,5 +26,4 @@ export class ProjectDetailComponent implements OnInit {
     });
     this.projectToDisplay = this.projectService.getProjectById(this.projectId);
   }
-
 }
