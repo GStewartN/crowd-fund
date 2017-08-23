@@ -1,3 +1,51 @@
-<p>
-  charities works!
-</p>
+<div *ngIf="addingNewCharity===false">
+  <button (click)="showAddNewForm()">Add New Charity</button>
+</div>
+<div *ngIf="addingNewCharity===true">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title"><h3>Add New Charity</h3></div>
+    </div>
+    <div class="panel-body">
+      <div>
+        <div>
+          <label>Project Title</label>
+          <br>
+          <input #newTitle>
+        </div>
+        <div>
+          <label>Description</label>
+          <br>
+          <input #newDescription>
+        </div>
+        <div>
+          <label>Manager(s)</label>
+          <br>
+          <input #newManagers>
+        </div>
+        <div>
+          <label>Target Funding</label>
+          <br>
+          <input #newTargetAmount>
+        </div>
+        <div>
+          <label>Ethics</label>
+          <br>
+          <input #newEthics>
+        </div>
+        <div>
+          <label>Mission Statement</label>
+          <br>
+          <input #newMission>
+        </div>
+        <button (click)="submitForm(newTitle.value, newDescription.value, newManagers.value, newTargetAmount.value, newEthics.value, newMission.value);
+        newTitle.value='';
+        newDescription.value='';
+        newManagers.value='';
+        newTargetAmount.value='';
+        newEthics.value='';
+        newMission.value=''">Add</button>
+      </div>
+    </div>
+  </div>
+</div>
