@@ -9,6 +9,7 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { routing } from './app.routing';
 import { SplashPageComponent } from './splash-page/splash-page.component';
+import { ProjectsComponent } from './projects/projects.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -20,7 +21,8 @@ export const firebaseConfig = {
 @NgModule({
   declarations: [
     AppComponent,
-    SplashPageComponent
+    SplashPageComponent,
+    ProjectsComponent
   ],
   imports: [
     BrowserModule,
