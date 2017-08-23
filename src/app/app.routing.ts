@@ -17,7 +17,7 @@ const appRoutes: Routes = [
     component: ProjectsComponent
   },
   {
-    path: 'project/:id',
+    path: 'projects/:id',
     component: ProjectDetailComponent
   },
   {
