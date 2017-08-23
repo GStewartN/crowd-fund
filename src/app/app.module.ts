@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 import { masterFirebaseConfig } from './api-keys';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { routing } from './app.routing';
+import { SplashPageComponent } from './splash-page/splash-page.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -17,12 +19,14 @@ export const firebaseConfig = {
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SplashPageComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
+    routing,
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule
   ],
