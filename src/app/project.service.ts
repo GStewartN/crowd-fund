@@ -14,6 +14,10 @@ export class ProjectService {
     return this.projects;
   }
 
+  addNewProject(newProject: Project) {
+    this.projects.push(newProject);
+  }
+
   getProjectById(projectId: string) {
     return this.database.object('projects/' + projectId);
   }
