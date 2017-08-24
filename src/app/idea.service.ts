@@ -22,4 +22,14 @@ export class IdeaService {
      return this.database.object('ideas/' + ideaId);
    }
 
+   updateIdea(localUpdatedIdea) {
+     var ideaEntryInFirebase = this.getIdeaById(localUpdatedIdea.$key);
+     ideaEntryInFirebase.update({title: localUpdatedIdea.title, description: localUpdatedIdea.description, managers: localUpdatedIdea.managers, mvp: localUpdatedIdea.mvp, targetAmount: localUpdatedIdea.targetAmount, rewards: localUpdatedIdea.rewards});
+   }
+
+   deleteIdea(localIdeaToDelete) {
+     var ideaEntryInFirebase = this.getIdeaById(localIdeaToDelete.$key);
+     ideaEntryInFirebase.remove();
+   }
+
 }

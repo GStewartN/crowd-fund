@@ -1,0 +1,28 @@
+<h4>Edit Idea</h4>
+
+<label>New Idea Title:</label>
+<input [(ngModel)]="selectedIdea.title">
+<br>
+
+<label>New Idea Description:</label>
+<input [(ngModel)]="selectedIdea.description">
+<br>
+
+<label>New Idea Managers:</label>
+<input [(ngModel)]="selectedIdea.managers">
+<br>
+
+<label>New Idea MVP:</label>
+<input [(ngModel)]="selectedIdea.mvp">
+<br>
+
+<label>New Idea Target Amount:</label>
+<input [(ngModel)]="selectedIdea.targetAmount">
+<br>
+
+<label>New Idea Rewards:</label>
+<input [(ngModel)]="selectedIdea.rewards">
+
+<button (click)="beginUpdatingIdea(selectedIdea)">Update</button>
+<hr>
+<button (click)="beginDeletingIdea(selectedIdea)">Delete</button>

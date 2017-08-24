@@ -57,11 +57,19 @@
   <option value="above25">Ideas Over 25000</option>
 </select>
 
-<div *ngFor="let idea of ideas | async | target:filterByTarget" (click)="goToDetailPage(idea)" class="panel panel-default">
-  <div class="panel-heading">
+<div *ngFor="let idea of ideas | async | target:filterByTarget" class="panel panel-default">
+  <div (click)="goToDetailPage(idea)" class="panel-heading">
     <h2>{{idea.title}}</h2>
   </div>
   <div class="panel-body">
     <p>{{idea.description}}</p>
+    <div *ngIf="currentRoute === '/admin'">
+      <p>Managers: {{idea.managers}}</p>
+      <p>MVP: {{idea.mvp}}</p>
+      <p>Target Goal: {{idea.targetAmount}}</p>
+      <p>Rewards: {{idea.rewards}}</p>
+      <hr>
+      <app-edit-idea [selectedIdea]="idea"></app-edit-idea>
+    </div>
   </div>
 </div>
