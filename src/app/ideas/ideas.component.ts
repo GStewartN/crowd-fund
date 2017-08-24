@@ -14,6 +14,7 @@ export class IdeasComponent implements OnInit {
   ideas: FirebaseListObservable<any[]>;
 
   addingNewIdea = false;
+  filterByTarget: string = "allIdeas";
 
   constructor(private router: Router, private ideaService: IdeaService) { }
 
@@ -33,5 +34,9 @@ export class IdeasComponent implements OnInit {
     var newIdea = new Idea(title, description, managers, mvp, targetAmount, rewards);
     this.ideaService.addNewIdea(newIdea);
     this.addingNewIdea = false;
+  }
+
+  onChange(optionFromMenu) {
+    this.filterByTarget = optionFromMenu;
   }
 }
