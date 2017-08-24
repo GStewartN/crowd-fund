@@ -14,6 +14,7 @@ export class CharitiesComponent implements OnInit {
   charities: FirebaseListObservable<any[]>;
 
   addingNewCharity = false;
+  filterByTarget: string = "allCharities";
 
   constructor(private router: Router, private charityService: CharityService) { }
 
@@ -33,6 +34,10 @@ export class CharitiesComponent implements OnInit {
     var newCharity = new Charity(title, description, managers, targetAmount, ethics, mission);
     this.charityService.addNewCharity(newCharity);
     this.addingNewCharity = false;
+  }
+
+  onChange(optionFromMenu) {
+    this.filterByTarget = optionFromMenu;
   }
 
 }

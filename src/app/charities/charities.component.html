@@ -50,7 +50,13 @@
   </div>
 </div>
 
-<div *ngFor="let charity of charities | async" (click)="goToDetailPage(charity)" class="panel panel-default">
+<select (change)="onChange($event.target.value)">
+  <option value="allCharities">All Charities</option>
+  <option value="below25">Charities Under 25000</option>
+  <option value="above25">Charities Above 25000</option>
+</select>
+
+<div *ngFor="let charity of charities | async | target:filterByTarget" (click)="goToDetailPage(charity)" class="panel panel-default">
   <div class="panel-heading">
     <h2>{{charity.title}}</h2>
   </div>
