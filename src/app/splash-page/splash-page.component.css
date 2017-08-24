@@ -1,0 +1,19 @@
+img {
+  max-width: 100%;
+  display: block;
+  margin-left: auto;
+}
+
+.flex-parent {
+  display: flex;
+}
+
+.flex-child {
+  padding: 20px;
+  margin: 0 5px;
+  align-self: center;
+}
+
+h4 {
+  text-align: center;
+}
