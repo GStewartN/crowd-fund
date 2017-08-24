@@ -4,7 +4,8 @@
   bottom: 0;
   width: 100%;
   height: 60px;
-  background-color: #f5f5f5;
+  background-color: #afafda;
+  color: white;
   padding: 15px;
 }
 
@@ -15,4 +16,16 @@
 
 .push {
   height: 60px;
+}
+
+.panel {
+  margin-top: 2%;
+}
+
+.body-bg {
+  background-color: lightblue;
+}
+
+.navbar {
+  background-color: #afafda;
 }
