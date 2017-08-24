@@ -19,6 +19,7 @@ import { CharityDetailComponent } from './charity-detail/charity-detail.componen
 import { TargetPipe } from './target.pipe';
 import { EditProjectComponent } from './edit-project/edit-project.component';
 import { EditIdeaComponent } from './edit-idea/edit-idea.component';
+import { EditCharityComponent } from './edit-charity/edit-charity.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -41,6 +42,7 @@ export const firebaseConfig = {
     TargetPipe,
     EditProjectComponent,
     EditIdeaComponent,
+    EditCharityComponent,
   ],
   imports: [
     BrowserModule,

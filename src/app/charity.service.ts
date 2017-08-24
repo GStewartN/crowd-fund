@@ -22,4 +22,14 @@ export class CharityService {
     return this.database.object('charities/' + charityId);
   }
 
+  updateCharity(localUpdatedCharity) {
+    var charityEntryInFirebase = this.getCharityById(localUpdatedCharity.$key);
+    charityEntryInFirebase.update({title: localUpdatedCharity.title, description: localUpdatedCharity.description, managers: localUpdatedCharity.managers, targetAmount: localUpdatedCharity.targetAmount, ethics: localUpdatedCharity.ethics, mission: localUpdatedCharity.mission});
+  }
+
+  deleteCharity(localCharityToDelete) {
+    var charityEntryInFirebase = this.getCharityById(localCharityToDelete.$key);
+    charityEntryInFirebase.remove();
+  }
+
 }

@@ -56,11 +56,19 @@
   <option value="above25">Charities Above 25000</option>
 </select>
 
-<div *ngFor="let charity of charities | async | target:filterByTarget" (click)="goToDetailPage(charity)" class="panel panel-default">
-  <div class="panel-heading">
+<div *ngFor="let charity of charities | async | target:filterByTarget" class="panel panel-default">
+  <div (click)="goToDetailPage(charity)" class="panel-heading">
     <h2>{{charity.title}}</h2>
   </div>
   <div class="panel-body">
     <p>{{charity.description}}</p>
+    <div *ngIf="currentRoute === '/admin'">
+      <p>Managers: {{charity.managers}}</p>
+      <p>Target Goal: {{charity.targetAmount}}</p>
+      <p>Ethics: {{charity.ethics}}</p>
+      <p>Mission: {{charity.mission}}</p>
+      <hr>
+      <app-edit-charity [selectedCharity]="charity"></app-edit-charity>
+    </div>
   </div>
 </div>
