@@ -1,44 +1,54 @@
 # CrowdFund
 
+Epicodus-JavaScript, Week 4 Angular, 08.24.2017
+
+_By Max Scher and Nathan Stewart_
+
+## Description
+
+The application is a simple clone of crowdfunding websites. It was created to practice using angular-cli with google firebase.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
 
-## Planning
-  1. App Architecture
-    * 3 Models: Project, Idea, Charity
-    * app.routing.ts file
-      <!--appRoutes
-        '' -- Splash
-        'projects' -- ProjectListComponent
-        'ideas' -- IdeaListComponent
-        'charities' - CharityListComponent
-        'projects/:id' - ProjectDetailComponent
-        'ideas/:id' - IdeaDetailComponent
-        'charities/:id' - CharityDetailComponent
-        'admin' - AdminComponent
-      -->
-    * Root Component ('/')
-      * Navbar - Routes to Following Components
-        * Project-List
-          * Route to Project-Detail Component, using service
-          * Add New Project Form
-        * Idea-List
-          * Route to Idea-Detail Component, using service
-          * Add New Idea Form
-        * Charity-List
-          * Route to Charity-Detail Component, using service
-          * Add new Charity Form
-      * Footer - Routes to Admin Component
-    * Splash Component  
+## Prerequisites
 
-    * Admin Component
-      * 3 Columns for each Object Type
-        * Each column contains add-new form, with list of all object of that type underneath, with edit & delete buttons.
-          * Potentially use a variable value to hide/show buttons for user vs. admin view.
-    * Project Service
-    * Idea Service
-    * Charity Service
+You will need the following things properly installed on your computer.
 
-    * firebase api-keys.ts file, included in .gitignore
+* [Node.js](https://nodejs.org/) (with NPM)
+* [Angular CLI](https://github.com/angular/angular-cli) version 1.3.0.
+
+* Once installed, you will need to install bower globally:
+ * `$ npm install bower -g`
+
+## Configuration/Dependencies
+
+* angular-cli
+* angularFire
+* bower
+* bootstrap
+
+The app will use angular-cli and assets and dependencies packaged with it.
+
+## Setup/Installation
+
+* `$ git clone <repository-url>` this repository
+* `$ cd <repository-name>`
+* `$ npm install`
+* `$ bower install`
+
+You will need your own [Firebase](https://firebase.google.com/) account to work with the database.
+ * Create Firebase account and sign in.
+ * Click Get Started.
+ * Click Add project and give it the same name as the project directory.
+ * Click Add Firebase to your web app.
+ * A window will pop up. Copy all lines starting with "apiKey" and ending with "messagingSenderId".
+ * Create a file in your project app  folder called api-keys.ts.
+ * Within the api-keys.ts file, type "export var masterFirebaseConfig = { }" and paste your copied firebase code between the curly braces.
+ * Go back to the database section of your project in firebase.
+ * Click the three vertical dots on the right side and select "Import JSON", click BROWSE, navigate to and select the mock-data.json file in the main project directory and click import.
+ * Click the RULES button in your firebase database and set read and write to "true" if you want others to be able to interact with the data.
+
+You should now be able to run `$ ng serve` in terminal, and view the app at localhost:4200 in your browser.
 
 ## Development server
 
@@ -64,3 +74,27 @@ Before running the tests make sure you are serving the app via `ng serve`.
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+### License
+
+MIT License
+
+Copyright &copy; 2017 Max Scher and Nathan Stewart
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
