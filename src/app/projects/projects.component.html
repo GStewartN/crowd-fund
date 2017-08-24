@@ -45,9 +45,13 @@
   </div>
 </div>
 
+<select (change)="onChange($event.target.value)">
+  <option value="allProjects">All Projects</option>
+  <option value="below25">Projects Under 25000</option>
+  <option value="above25">Projects Above 25000</option>
+</select>
 
-
-<div *ngFor="let project of projects | async" (click)="goToDetailPage(project)" class="panel panel-default">
+<div *ngFor="let project of projects | async | target:filterByTarget" (click)="goToDetailPage(project)" class="panel panel-default">
   <div class="panel-heading">
     <h2>{{project.title}}</h2>
   </div>

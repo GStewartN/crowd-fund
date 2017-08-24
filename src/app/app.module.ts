@@ -16,6 +16,7 @@ import { AdminComponent } from './admin/admin.component';
 import { ProjectDetailComponent } from './project-detail/project-detail.component';
 import { IdeaDetailComponent } from './idea-detail/idea-detail.component';
 import { CharityDetailComponent } from './charity-detail/charity-detail.component';
+import { TargetPipe } from './target.pipe';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -34,7 +35,8 @@ export const firebaseConfig = {
     AdminComponent,
     ProjectDetailComponent,
     IdeaDetailComponent,
-    CharityDetailComponent
+    CharityDetailComponent,
+    TargetPipe
   ],
   imports: [
     BrowserModule,

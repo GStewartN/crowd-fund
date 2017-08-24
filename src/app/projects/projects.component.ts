@@ -14,6 +14,7 @@ export class ProjectsComponent implements OnInit {
   projects: FirebaseListObservable<any[]>;
 
   addingNewProject = false;
+  filterByTarget: string = "allProjects";
 
   constructor(private router: Router, private projectService: ProjectService) { }
 
@@ -33,6 +34,10 @@ export class ProjectsComponent implements OnInit {
     var newProject = new Project(title, description, managers, targetAmount, rewards);
     this.projectService.addNewProject(newProject);
     this.addingNewProject = false;
+  }
+
+  onChange(optionFromMenu) {
+    this.filterByTarget = optionFromMenu;
   }
 
 }
