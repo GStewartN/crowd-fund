@@ -20,4 +20,8 @@ export class EditProjectComponent implements OnInit {
     this.projectService.updateProject(selectedProject);
   }
 
+  beginDeletingProject(projectToDelete) {
+    this.projectService.deleteProject(projectToDelete);
+  }
+
 }
