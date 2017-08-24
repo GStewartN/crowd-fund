@@ -5,3 +5,7 @@ button {
 .panel-heading {
   background-color: #afafda;
 }
+
+.panel-body {
+  background-color: #fdf7fb;
+}

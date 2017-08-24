@@ -17,3 +17,9 @@ img {
 h4 {
   text-align: center;
 }
+.panel-heading {
+  background-color: #afafda;
+}
+.panel-body {
+  background-color: #fdf7fb;
+}
