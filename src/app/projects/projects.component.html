@@ -51,8 +51,8 @@
   <option value="above25">Projects Above 25000</option>
 </select>
 
-<div *ngFor="let project of projects | async | target:filterByTarget" (click)="goToDetailPage(project)" class="panel panel-default">
-  <div class="panel-heading">
+<div *ngFor="let project of projects | async | target:filterByTarget" class="panel panel-default">
+  <div (click)="goToDetailPage(project)" class="panel-heading">
     <h2>{{project.title}}</h2>
   </div>
   <div class="panel-body">
@@ -61,6 +61,8 @@
       <p>Managers: {{project.managers}}</p>
       <p>Target Goal: {{project.targetAmount}}</p>
       <p>Rewards: {{project.rewards}}</p>
+      <hr>
+      <app-edit-project [selectedProject]="project"></app-edit-project>
     </div>
   </div>
 </div>
