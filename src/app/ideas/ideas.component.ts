@@ -12,6 +12,7 @@ import { FirebaseListObservable } from 'angularfire2/database';
 })
 export class IdeasComponent implements OnInit {
   ideas: FirebaseListObservable<any[]>;
+  currentRoute: string = this.router.url;
 
   addingNewIdea = false;
   filterByTarget: string = "allIdeas";

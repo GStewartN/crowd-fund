@@ -12,6 +12,7 @@ import { CharityService } from '../charity.service';
 })
 export class CharitiesComponent implements OnInit {
   charities: FirebaseListObservable<any[]>;
+  currentRoute: string = this.router.url;
 
   addingNewCharity = false;
   filterByTarget: string = "allCharities";

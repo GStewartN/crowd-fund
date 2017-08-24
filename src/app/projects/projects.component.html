@@ -57,5 +57,10 @@
   </div>
   <div class="panel-body">
     <p>{{project.description}}</p>
+    <div *ngIf="currentRoute === '/admin'">
+      <p>Managers: {{project.managers}}</p>
+      <p>Target Goal: {{project.targetAmount}}</p>
+      <p>Rewards: {{project.rewards}}</p>
+    </div>
   </div>
 </div>
