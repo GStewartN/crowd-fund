@@ -43,7 +43,7 @@ You will need your own [Firebase](https://firebase.google.com/) account to work 
  * Click Add Firebase to your web app.
  * A window will pop up. Copy all lines starting with "apiKey" and ending with "messagingSenderId".
  * Create a file in your project app  folder called api-keys.ts.
- * Within the api-keys.ts file, type "export var masterFirebaseConfig = { }" and paste your copied firebase code between the curly braces.
+ * Within the api-keys.ts file, type "export var masterFirebaseConfig = { }" and paste your copied firebase code between the curly braces. Be sure to add this file to .gitignore.
  * Go back to the database section of your project in firebase.
  * Click the three vertical dots on the right side and select "Import JSON", click BROWSE, navigate to and select the mock-data.json file in the main project directory and click import.
  * Click the RULES button in your firebase database and set read and write to "true" if you want others to be able to interact with the data.
