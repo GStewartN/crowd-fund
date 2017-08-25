@@ -8,6 +8,8 @@ _By Max Scher and Nathan Stewart_
 
 The application is a simple clone of crowdfunding websites. It was created to practice using angular-cli with google firebase.
 
+## [The app is hosted here.](https://crowd-fund-73031.firebaseapp.com/)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
 
 ## Prerequisites
